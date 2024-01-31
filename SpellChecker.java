@@ -56,9 +56,9 @@ public class SpellChecker {
 	public static String spellChecker(String word, int threshold, String[] dictionary) {
 		// Your code goes here
 		int min = threshold;
-		String minWord = "";
+		String minWord = word ;
 		for (int i = 0; i < dictionary.length; i++){
-			if (levenshtein(word, dictionary[i]) < min ){
+			if (levenshtein(word, dictionary[i]) <= min ){
 				minWord = dictionary[i];
 				min = levenshtein(word, dictionary[i]);
 			}
